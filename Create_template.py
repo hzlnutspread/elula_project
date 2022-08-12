@@ -1,7 +1,5 @@
 import openpyxl
-from openpyxl import *
 import pandas as pd
-from datetime import datetime, timedelta
 
 paths = ['2022_data', '2021_data', '2020_data', '2019_data']
 for path in paths:

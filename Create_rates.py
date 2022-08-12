@@ -1,5 +1,4 @@
 import openpyxl
-from openpyxl import *
 import pandas as pd
 import os
 
@@ -42,6 +41,9 @@ for path in paths:
         df.rename(columns={'Unnamed: 0': '1', 'Unnamed: 1': '2', 'Unnamed: 2': '3', 'Unnamed: 3': '4', 'Unnamed: 4': '5',
                            'Unnamed: 5': '6', 'Unnamed: 6': '7', 'Unnamed: 7': '8'}, inplace=True)
         # Turns all of the dataframe values into one long list of arrays
+
+        columns_titles = ['1', '2', '3', '8', '4', '5', '6', '7']
+        df = df.reindex(columns=columns_titles)
         df_list = df.values.tolist()
         # so for each array [] in this list, print every element so that our final list is one long list of only numbers
         for list in df_list:
